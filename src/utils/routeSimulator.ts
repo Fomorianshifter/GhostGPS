@@ -144,7 +144,9 @@ export function useRouteSimulator({
       if (timerRef.current) {
         clearInterval(timerRef.current);
       }
-      stopMockLocationProvider();
+      // Fire-and-forget: best-effort cleanup; native provider will also be
+      // cleaned up when the app process exits.
+      stopMockLocationProvider().catch(() => {});
     };
   }, []);
 
