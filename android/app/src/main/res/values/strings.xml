@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GhostGPS</string>
+    <!-- Replace with your Google Maps API key for Android map tiles -->
+    <string name="google_maps_key">YOUR_GOOGLE_MAPS_API_KEY</string>
+</resources>
